@@ -1,0 +1,97 @@
+# 记录模板，不是已实现运行器的配置协议。
+# 复制为 project.local.yaml；null 表示未知，不允许运行时猜默认值。
+# 本地副本已被 .gitignore 排除。报告引用脱敏配置与 SHA256。
+project: YAM-Deploy
+phase: P1
+
+paths:
+  eva_root: null
+  eva_python: null
+  hardware_python: null
+  model_root: null
+  model_python: null
+  data_root: null
+  artifacts_root: null
+
+baseline:
+  eva_commit: null
+  sdk_commit: null
+  local_changes_snapshot: null
+  dependency_snapshot: null
+  vr_config: null
+  original_start_command_record: null
+  recovery_record: null
+
+station:
+  platform: yam_bimanual
+  teleop: eva_vr
+  hardware_model: null
+  vr_device: null
+  camera_mapping_record: null
+  can_mapping_record: null
+  calibration_record: null
+  onsite_verified: false
+
+model:
+  candidate: LingBot-VLA-v2
+  selected: false
+  source_commit: null
+  base_checkpoint: null
+  trained_checkpoint: null
+  training_config: null
+  normalization: null
+  preprocessing: null
+
+contract:
+  state_key: null
+  action_key: null
+  state_dimension: null
+  action_dimension: null
+  joint_order: null
+  joint_unit: null
+  gripper_mapping: null
+  camera_keys: null
+  color_and_layout: null
+  action_space: null
+  action_source: null
+  time_alignment: null
+  normalization_owner: null
+  verified_with_real_episode: false
+
+task:
+  name: null
+  instruction: null
+  active_arms: null
+  initial_conditions: null
+  success_rule: null
+  time_limit_seconds: null
+
+data:
+  pilot_episodes: 3
+  target_episodes: null
+  version: null
+  format: null
+  qc_report: null
+  episode_split_file: null
+  training_statistics: null
+
+training:
+  method: null
+  seed: null
+  config_file: null
+  smoke_run_report: null
+  full_run_report: null
+
+deployment:
+  # 默认无硬件输出；这个字段本身不能保证安全，未来运行器必须实现并测试。
+  mode: offline
+  command_output_enabled: false
+  policy_endpoint: null
+  control_rate_hz: null
+  execute_horizon: null
+  observation_timeout_seconds: null
+  action_timeout_seconds: null
+  limits_record: null
+  control_ownership_record: null
+  stop_behavior_record: null
+  planned_eval_episodes: null

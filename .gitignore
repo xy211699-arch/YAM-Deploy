@@ -1,0 +1,45 @@
+# Local environments and Python caches
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Machine-specific config and credentials
+.env
+.env.*
+!.env.example
+*.local.yaml
+*.local.yml
+*.local.json
+*.pem
+*.key
+
+# Keep bulk artifacts and upstream installations outside this repository
+/data/
+/datasets/
+/models/
+/checkpoints/
+/outputs/
+/runs/
+/logs/
+/third_party/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.mp4
+*.avi
+*.mcap
+*.hdf5
+*.h5
+*.parquet
+
+# Editor/OS files
+.DS_Store
+.idea/
+.vscode/
